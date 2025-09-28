@@ -1,9 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 #define SIZE 6
 
 //Se genera una matriz con numero aleatorios naturales menores a nueve
 void generar_matriz(int matriz[SIZE][SIZE]) {
+    srand(time(NULL));
     for (int i = 0; i < SIZE; i++) {
         for (int j = 0; j < SIZE; j++) {
             matriz[i][j] = rand() % 10;
