@@ -1,10 +1,11 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-void leer_matriz(int matriz[3][3]) {
+
+void generar_matriz(int matriz[3][3]) {
     for (int i = 0; i < 3; i++) {
         for (int j = 0; j < 3; j++) {
-            printf("Inserte el valor de la casilla %d,%d: ", i + 1, j + 1);
-            scanf("%d", &matriz[i][j]);
+            matriz[i][j] = rand() % 10;
         }
     }
 }
@@ -43,7 +44,7 @@ int sumar_filas(int matriz[3][3], int n) {
 
 int main() {
     int matriz[3][3];
-    leer_matriz(matriz);
+    generar_matriz(matriz);
 
     printf("La matriz utilizada corresponde a:\n");
     for (int i = 0; i < 3; i++) {
